@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
+
+      <div class="form-group mb-3">
+    <p><strong>Name:</strong></p>
+    <div>
+      <%= @repo.name %>
+    </div>
+  </div>
+  
+      <div class="form-group mb-3">
+    <p><strong>Url:</strong></p>
+    <div>
+      <%= @repo.url %>
+    </div>
+  </div>
+  
+  
+  <%= link_to 'Edit', edit_repo_path(@repo), class: "btn btn-primary min-width-btn" %>
+  <%= link_to 'Back', repos_path, class: "btn btn-light min-width-btn" %>
+</div>
