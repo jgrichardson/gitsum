@@ -7,7 +7,10 @@
     <thead>
       <tr>
           <th>Name</th>
-          <th>URL</th>
+          <th>Contributors</th>
+          <th>Commits</th>
+          <th>Stars</th>
+          <th>Last Commit</th>
           <th colspan="3"></th>
       </tr>
     </thead>
@@ -16,8 +19,10 @@
       <% @repos.each do |repo| %>
         <tr>
             <td><%= repo.name %></td>
-            <td><%= repo.url %></td>
-            <td><%= link_to 'Show', repo %></td>
+            <td><%= repo.contributors_count %></td>
+            <td><%= repo.commits_count %></td>
+            <td><%= repo.stars_count %></td>
+            <td><%= repo.last_commit_at %></td>
           <td><%= link_to 'Edit', edit_repo_path(repo) %></td>
           <td><%= link_to 'Destroy', repo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
